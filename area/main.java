@@ -37,9 +37,6 @@ class Square extends Shape {
 class Main {
     public static void main(String args[]) {
         Shape[] shape = new Shape[2]; // Creating shape array of size 2
-        // instead of hardcoding the inout we can take input from user also
-        // a switch case could be created press 1 for area of square press 2 for area of
-        // triangle
         shape[0] = new Square(5); // creating circle object at index 0
         shape[1] = new Triangle(2, 2); // creating rectangle object at index 1
         // Shape object is calling children classes method

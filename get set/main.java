@@ -1,36 +1,19 @@
-public class main {
-    
-}
+class Student {
+    private String name;
 
-interface MyInterface {
-    /*
-     * compiler will treat them as:
-     * public abstract void method1();
-     * public abstract void method2();
-     */
-    public void method1();
-
-    public void method2();
-}
-
-class Main implements MyInterface {
-    /*
-     * This class must have to implement both the abstract methods
-     * else you will get compilation error
-     * try removing one method and see the error
-     */
-    public void method1() {
-        System.out.println("implementation of method1");
+    public String getName() { //getter method
+        return name;
     }
 
-    public void method2() {
-        System.out.println("implementation of method2");
+    public void setName(String name) {  //setter method
+        this.name = name;
     }
+}
 
-    public static void main(String arg[]) {
-        MyInterface obj = new Main();
-        obj.method1();
-        obj.method2();
-
+class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.setName("Aashish @Codingal");
+        System.out.println(s.getName());
     }
 }
